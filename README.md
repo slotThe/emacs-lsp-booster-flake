@@ -11,7 +11,7 @@ Add the input to your flake inputs, and enable the overlay:
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/«version»";
-    emacs-lsp-booster.url = "github:blahgeek/emacs-lsp-booster";
+    emacs-lsp-booster.url = "github:slotThe/emacs-lsp-booster-flake";
     # The emacs-lsp-booster flake itself depends on `nixpkgs` and
     # `flake-utils`; you might want to make both of these inputs
     # follow the ones in your configuration.
