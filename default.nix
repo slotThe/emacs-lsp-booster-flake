@@ -2,15 +2,15 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "emacs-lsp-booster";
-  version = "0.1.1";
+  version = "0.2.0";
 
-  cargoSha256 = "sha256-quqhAMKsZorYKFByy2bojGgYR2Ps959Rg/TP8SnwbqM=";
+  cargoSha256 = "2wXsPkBl4InjbdYUiiQ+5fZFanLA88t5ApGZ4psfDqk=";
 
   src = fetchFromGitHub {
     owner = "blahgeek";
     repo = pname;
-    rev = "b98b873226b587bd1689b2073ea114d8eaa3676f";
-    hash = "sha256-uJ4EKBLZ95Ig2dpocB/vduYXj3eKg20tXKa1KDl2DAU=";
+    rev = "v${version}";
+    sha256 = "DmEnuAR/OtTdKApEWCdOPAJplT29kuM6ZSHeOnQVo/c=";
   };
 
   nativeBuildInputs = with pkgs; [
