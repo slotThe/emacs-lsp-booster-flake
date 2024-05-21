@@ -1,4 +1,4 @@
-{ pkgs, fetchFromGitHub, rustPlatform, lib, ... }:
+{ fetchFromGitHub, rustPlatform, lib, ... }:
 
 rustPlatform.buildRustPackage rec {
   pname = "emacs-lsp-booster";
@@ -13,9 +13,9 @@ rustPlatform.buildRustPackage rec {
     sha256 = "DmEnuAR/OtTdKApEWCdOPAJplT29kuM6ZSHeOnQVo/c=";
   };
 
-  nativeBuildInputs = with pkgs; [
-    emacs  # For tests
-  ];
+  # The tests contain what are essentially benchmarks—it seems prudent not to
+  # stress our users' computers in that way every time they build the package.
+  doCheck = false;
 
   meta = with lib; {
     description = "Improve performance of Emacs LSP servers by converting JSON to bytecode";
