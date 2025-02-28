@@ -4,13 +4,13 @@ rustPlatform.buildRustPackage rec {
   pname = "emacs-lsp-booster";
   version = "0.2.1";
 
-  cargoSha256 = "CvIJ56QrIzQULFeXYQXTpX9PoGx1/DWtgwzfJ+mljEI=";
+  cargoHash = "sha256:CvIJ56QrIzQULFeXYQXTpX9PoGx1/DWtgwzfJ+mljEI=";
 
   src = fetchFromGitHub {
     owner = "blahgeek";
     repo = pname;
     rev = "v${version}";
-    sha256 = "uP/xJfXQtk8oaG5Zk+dw+C2fVFdjpUZTDASFuj1+eYs=";
+    hash = "sha256:uP/xJfXQtk8oaG5Zk+dw+C2fVFdjpUZTDASFuj1+eYs=";
   };
 
   # The tests contain what are essentially benchmarks—it seems prudent not to
