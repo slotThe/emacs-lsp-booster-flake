@@ -4,7 +4,7 @@ rustPlatform.buildRustPackage rec {
   pname = "emacs-lsp-booster";
   version = "0.2.1";
 
-  cargoHash = "sha256:CvIJ56QrIzQULFeXYQXTpX9PoGx1/DWtgwzfJ+mljEI=";
+  cargoHash = "sha256:BR0IELLzm+9coaiLXQn+Rw6VLyiFEAk/nkO08qPwAac=";
 
   src = fetchFromGitHub {
     owner = "blahgeek";
